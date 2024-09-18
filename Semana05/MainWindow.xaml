@@ -1,0 +1,22 @@
+﻿<Window x:Class="Semana05.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Semana05"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,0,0,180">
+        <!-- DataGrid para mostrar empleados -->
+        <DataGrid Name="Datagrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,49,-40"/>
+
+        <!-- Botones de control -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,-165">
+            <Button Content="Listar Empleados" Width="150" Height="30" Margin="0,0,10,0" Click="BtnListarEmpleados_Click"/>
+            <Button Content="Crear Empleado" Width="150" Height="30" Margin="0,0,10,0" Click="BtnCrearEmpleado_Click"/>
+            <Button Content="Actualizar Empleado" Width="150" Height="30" Margin="0,0,10,0" Click="BtnActualizarEmpleado_Click"/>
+            <Button Content="Eliminar Empleado" Width="150" Height="30" Click="BtnEliminarEmpleado_Click"/>
+        </StackPanel>
+       
+    </Grid>
+</Window>

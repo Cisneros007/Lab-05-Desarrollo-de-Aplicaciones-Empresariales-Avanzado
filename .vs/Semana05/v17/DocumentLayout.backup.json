@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Alumno\\source\\repos\\Semana05\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{060321DF-A0FD-483F-9814-177B97D6DA8F}|Semana05\\Semana05.csproj|c:\\users\\alumno\\source\\repos\\semana05\\semana05\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{060321DF-A0FD-483F-9814-177B97D6DA8F}|Semana05\\Semana05.csproj|solutionrelative:semana05\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060321DF-A0FD-483F-9814-177B97D6DA8F}|Semana05\\Semana05.csproj|c:\\users\\alumno\\source\\repos\\semana05\\semana05\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060321DF-A0FD-483F-9814-177B97D6DA8F}|Semana05\\Semana05.csproj|solutionrelative:semana05\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060321DF-A0FD-483F-9814-177B97D6DA8F}|Semana05\\Semana05.csproj|c:\\users\\alumno\\source\\repos\\semana05\\semana05\\clase1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060321DF-A0FD-483F-9814-177B97D6DA8F}|Semana05\\Semana05.csproj|solutionrelative:semana05\\clase1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Clase1.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\source\\repos\\Semana05\\Semana05\\Clase1.cs",
+              "RelativeDocumentMoniker": "Semana05\\Clase1.cs",
+              "ToolTip": "C:\\Users\\Alumno\\source\\repos\\Semana05\\Semana05\\Clase1.cs",
+              "RelativeToolTip": "Semana05\\Clase1.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T01:59:29.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\source\\repos\\Semana05\\Semana05\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Semana05\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Alumno\\source\\repos\\Semana05\\Semana05\\MainWindow.xaml",
+              "RelativeToolTip": "Semana05\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-18T00:45:28.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\source\\repos\\Semana05\\Semana05\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Semana05\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Alumno\\source\\repos\\Semana05\\Semana05\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "Semana05\\MainWindow.xaml.cs*",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAUwEsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T00:45:27.333Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

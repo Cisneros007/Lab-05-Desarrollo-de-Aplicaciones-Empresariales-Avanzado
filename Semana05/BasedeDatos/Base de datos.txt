@@ -1,0 +1,126 @@
+USE NeptunoB;
+
+-- Procedimiento para listar empleados
+CREATE PROC [dbo].[USP_ListarEmpleados01]
+AS
+BEGIN
+    SELECT * FROM Empleados;
+END;
+
+-- Procedimiento para insertar un nuevo empleado con IdEmpleado
+CREATE PROC [dbo].[USP_CrearEmpleado01]
+    @IdEmpleado INT,
+    @Apellidos NVARCHAR(20),
+    @Nombre NVARCHAR(20),
+    @Cargo NVARCHAR(40),
+    @Tratamiento NVARCHAR(40),
+    @FechaNacimiento DATE,
+    @FechaContratacion DATE,
+    @Direccion NVARCHAR(60),
+    @Ciudad NVARCHAR(15),
+    @Region NVARCHAR(15),
+    @CodPostal NVARCHAR(10),
+    @Pais NVARCHAR(15),
+    @TelDomicilio NVARCHAR(24),
+    @Extension NVARCHAR(4),
+    @Notas TEXT,
+    @Jefe INT,
+    @SueldoBasico DECIMAL(18, 0)
+AS
+BEGIN
+    INSERT INTO Empleados (IdEmpleado, Apellidos, Nombre, Cargo, Tratamiento, FechaNacimiento, FechaContratacion, Direccion, Ciudad, Region, CodPostal, Pais, TelDomicilio, Extension, Notas, Jefe, SueldoBasico)
+    VALUES (@IdEmpleado, @Apellidos, @Nombre, @Cargo, @Tratamiento, @FechaNacimiento, @FechaContratacion, @Direccion, @Ciudad, @Region, @CodPostal, @Pais, @TelDomicilio, @Extension, @Notas, @Jefe, @SueldoBasico);
+END;
+
+-- Insertar un nuevo empleado
+EXEC [dbo].[USP_CrearEmpleado01]
+    @IdEmpleado = 10,  
+    @Apellidos = 'Martínez',
+    @Nombre = 'Juan',
+    @Cargo = 'Gerente',
+    @Tratamiento = 'Sr.',
+    @FechaNacimiento = '1985-08-15',
+    @FechaContratacion = '2020-06-01',
+    @Direccion = 'Calle Falsa 123',
+    @Ciudad = 'Lima',
+    @Region = 'Lima',
+    @CodPostal = '15001',
+    @Pais = 'Perú',
+    @TelDomicilio = '987654321',
+    @Extension = '1001',
+    @Notas = 'Empleado con alto rendimiento',
+    @Jefe = 2,
+    @SueldoBasico = 5000;
+
+-- Procedimiento para actu	izar un empleado por IdEmpleado
+CREATE PROC [dbo].[USP_ActualizarEmpleado01]
+    @IdEmpleado INT,
+    @Apellidos NVARCHAR(20),
+    @Nombre NVARCHAR(20),
+    @Cargo NVARCHAR(40),
+    @Tratamiento NVARCHAR(40),
+    @FechaNacimiento DATE,
+    @FechaContratacion DATE,
+    @Direccion NVARCHAR(60),
+    @Ciudad NVARCHAR(15),
+    @Region NVARCHAR(15),
+    @CodPostal NVARCHAR(10),
+    @Pais NVARCHAR(15),
+    @TelDomicilio NVARCHAR(24),
+    @Extension NVARCHAR(4),
+    @Notas TEXT,
+    @Jefe INT,
+    @SueldoBasico DECIMAL(18, 0)
+AS
+BEGIN
+    UPDATE Empleados
+    SET Apellidos = @Apellidos,
+        Nombre = @Nombre,
+        Cargo = @Cargo,
+        Tratamiento = @Tratamiento,
+        FechaNacimiento = @FechaNacimiento,
+        FechaContratacion = @FechaContratacion,
+        Direccion = @Direccion,
+        Ciudad = @Ciudad,
+        Region = @Region,
+        CodPostal = @CodPostal,
+        Pais = @Pais,
+        TelDomicilio = @TelDomicilio,
+        Extension = @Extension,
+        Notas = @Notas,
+        Jefe = @Jefe,
+        SueldoBasico = @SueldoBasico
+    WHERE IdEmpleado = @IdEmpleado;
+END;
+
+-- Actualizar un empleado
+EXEC [dbo].[USP_ActualizarEmpleado01]
+    @IdEmpleado = 10,  
+    @Apellidos = 'Martínez',
+    @Nombre = 'Juan',
+    @Cargo = 'Gerente General',
+    @Tratamiento = 'Sr.',
+    @FechaNacimiento = '1985-08-15',
+    @FechaContratacion = '2020-06-01',
+    @Direccion = 'Calle Falsa 123',
+    @Ciudad = 'Lima',
+    @Region = 'Lima',
+    @CodPostal = '15001',
+    @Pais = 'Perú',
+    @TelDomicilio = '987654321',
+    @Extension = '1001',
+    @Notas = 'Actualización de datos',
+    @Jefe = 2,
+    @SueldoBasico = 6000;
+
+
+	-- Procedimiento para eliminar un empleado por IdEmpleado
+CREATE PROC [dbo].[USP_EliminarEmpleado01]
+    @IdEmpleado INT
+AS
+BEGIN
+    DELETE FROM Empleados WHERE IdEmpleado = @IdEmpleado;
+END;
+
+-- Eliminar un empleado por su IdEmpleado
+EXEC [dbo].[USP_EliminarEmpleado01] @IdEmpleado = 10;
