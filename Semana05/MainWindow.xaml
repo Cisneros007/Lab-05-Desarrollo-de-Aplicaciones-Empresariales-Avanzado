@@ -1,22 +1,110 @@
-﻿<Window x:Class="Semana05.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Semana05"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="0,0,0,180">
-        <!-- DataGrid para mostrar empleados -->
-        <DataGrid Name="Datagrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,49,-40"/>
+﻿    <Window x:Class="Semana05.MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            Title="Gestión de Empleados" Height="712" Width="810" 
+            Background="#A8E6CF">
+        <Grid Margin="0,0,10,-253">
+            <Image Source="dinosaur.png" HorizontalAlignment="Right" VerticalAlignment="Top" Width="150" Margin="10"/>
+            <DataGrid x:Name="Datagrid" AutoGenerateColumns="False" SelectionChanged="DataGrid_SelectionChanged" Margin="513,30,10,290" Background="#FFFDFA" RenderTransformOrigin="0.809,0.463">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding IdEmpleado}" />
+                    <DataGridTextColumn Header="Apellidos" Binding="{Binding Apellidos}" />
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
+                    <DataGridTextColumn Header="Cargo" Binding="{Binding Cargo}" />
+                    <DataGridTextColumn Header="Tratamiento" Binding="{Binding Tratamiento}" />
+                    <DataGridTextColumn Header="Fecha Nac." Binding="{Binding FechaNacimiento}" />
+                    <DataGridTextColumn Header="Fecha Contrat." Binding="{Binding FechaContratacion}" />
+                    <DataGridTextColumn Header="Dirección" Binding="{Binding Direccion}" />
+                    <DataGridTextColumn Header="Ciudad" Binding="{Binding Ciudad}" />
+                    <DataGridTextColumn Header="Región" Binding="{Binding Region}" />
+                    <DataGridTextColumn Header="Cod. Postal" Binding="{Binding CodPostal}" />
+                    <DataGridTextColumn Header="País" Binding="{Binding Pais}" />
+                    <DataGridTextColumn Header="Tel. Domicilio" Binding="{Binding TelDomicilio}" />
+                    <DataGridTextColumn Header="Extensión" Binding="{Binding Extension}" />
+                    <DataGridTextColumn Header="Notas" Binding="{Binding Notas}" />
+                    <DataGridTextColumn Header="Jefe" Binding="{Binding Jefe}" />
+                    <DataGridTextColumn Header="Sueldo" Binding="{Binding SueldoBasico}" />
+                </DataGrid.Columns>
+            </DataGrid>
 
-        <!-- Botones de control -->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,-165">
-            <Button Content="Listar Empleados" Width="150" Height="30" Margin="0,0,10,0" Click="BtnListarEmpleados_Click"/>
-            <Button Content="Crear Empleado" Width="150" Height="30" Margin="0,0,10,0" Click="BtnCrearEmpleado_Click"/>
-            <Button Content="Actualizar Empleado" Width="150" Height="30" Margin="0,0,10,0" Click="BtnActualizarEmpleado_Click"/>
-            <Button Content="Eliminar Empleado" Width="150" Height="30" Click="BtnEliminarEmpleado_Click"/>
-        </StackPanel>
-       
-    </Grid>
-</Window>
+            <StackPanel Margin="3,5,17,0" VerticalAlignment="Top">
+                <TextBlock Text="Datos del Empleado" FontWeight="Bold" FontSize="16" Margin="0,0,0,10" Foreground="#6F1D99"/>
+
+                <Grid Margin="0,5">
+                    <TextBlock Text="ID Empleado" Foreground="Gray" />
+                    <TextBox x:Name="txtIdEmpleado" Width="200" Margin="0,5,0,0" />
+                </Grid>
+                <Grid Margin="0,5">
+                    <TextBlock Text="Apellidos" Foreground="Gray" />
+                    <TextBox x:Name="txtApellidos" Width="200" Margin="0,5,0,0" />
+                </Grid>
+                <Grid Margin="0,5">
+                    <TextBlock Text="Nombre" Foreground="Gray" />
+                    <TextBox x:Name="txtNombre" Width="200" Margin="0,5,0,0" />
+                </Grid>
+                <Grid Margin="0,5">
+                    <TextBlock Text="Cargo" Foreground="Gray" />
+                    <TextBox x:Name="txtCargo" Width="200" Margin="0,5,0,0" />
+                </Grid>
+                <Grid Margin="0,5">
+                    <TextBlock Text="Tratamiento" Foreground="Gray" />
+                    <TextBox x:Name="txtTratamiento" Width="200" Margin="0,5,0,0" />
+                </Grid>
+                <Grid Margin="0,5">
+                    <TextBlock Text="Fecha Nacimiento" Foreground="Gray" />
+                    <DatePicker x:Name="dpFechaNacimiento" Width="200" Margin="0,5,0,0" />
+                </Grid>
+                <Grid Margin="0,5">
+                    <TextBlock Text="Fecha Contratación" Foreground="Gray" />
+                    <DatePicker x:Name="dpFechaContratacion" Width="200" Margin="0,5,0,0" />
+                </Grid>
+                <Grid Margin="0,5">
+                    <TextBlock Text="Dirección" Foreground="Gray" />
+                    <TextBox x:Name="txtDireccion" Width="200" Margin="0,5,0,0" />
+                </Grid>
+                <Grid Margin="0,5">
+                    <TextBlock Text="Ciudad" Foreground="Gray" />
+                    <TextBox x:Name="txtCiudad" Width="200" Margin="0,5,0,0" />
+                </Grid>
+                <Grid Margin="0,5">
+                    <TextBlock Text="Región" Foreground="Gray" />
+                    <TextBox x:Name="txtRegion" Width="200" Margin="0,5,0,0" />
+                </Grid>
+                <Grid Margin="0,5">
+                    <TextBlock Text="Código Postal" Foreground="Gray" />
+                    <TextBox x:Name="txtCodPostal" Width="200" Margin="0,5,0,0" />
+                </Grid>
+                <Grid Margin="0,5">
+                    <TextBlock Text="País" Foreground="Gray" />
+                    <TextBox x:Name="txtPais" Width="200" Margin="0,5,0,0" />
+                </Grid>
+                <Grid Margin="0,5">
+                    <TextBlock Text="Teléfono Domicilio" Foreground="Gray" />
+                    <TextBox x:Name="txtTelDomicilio" Width="200" Margin="0,5,0,0" />
+                </Grid>
+                <Grid Margin="0,5">
+                    <TextBlock Text="Extensión" Foreground="Gray" />
+                    <TextBox x:Name="txtExtension" Width="200" Margin="0,5,0,0" />
+                </Grid>
+                <Grid Margin="0,5">
+                    <TextBlock Text="Notas" Foreground="Gray" />
+                    <TextBox x:Name="txtNotas" Width="200" Margin="0,5,0,0" />
+                </Grid>
+                <Grid Margin="0,5">
+                    <TextBlock Text="Jefe ID" Foreground="Gray" />
+                    <TextBox x:Name="txtJefe" Width="200" Margin="0,5,0,0" />
+                </Grid>
+                <Grid Margin="0,5">
+                    <TextBlock Text="Sueldo Básico" Foreground="Gray" />
+                    <TextBox x:Name="txtSueldoBasico" Width="200" Margin="0,5,0,0" />
+                </Grid>
+
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Button Content="Listar Empleados" Click="BtnListarEmpleados_Click" Width="120" Margin="5" Background="#FFD03A20" Foreground="White" />
+                    <Button Content="Crear Empleado" Click="BtnCrearEmpleado_Click" Width="120" Margin="5" Background="#FFD03A20" Foreground="White" />
+                    <Button Content="Actualizar Empleado" Click="BtnActualizarEmpleado_Click" Width="120" Margin="5" Background="#FFD03A20" Foreground="White" />
+                    <Button Content="Eliminar Empleado" Click="BtnEliminarEmpleado_Click" Width="120" Margin="5" Background="#FFD03A20" Foreground="White" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Window>

@@ -68,6 +68,8 @@
     </Compile>
     <Compile Include="BasedeDatos\FileName.cs" />
     <Compile Include="Clase1.cs" />
+    <Compile Include="EmpleadoCreate.cs" />
+    <Compile Include="empleadoscreate.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
